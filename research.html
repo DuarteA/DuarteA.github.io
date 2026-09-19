@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Research — Duarte Antunes, TU/e</title>
+<meta name="description" content="Research lines of Duarte Antunes, Associate Professor at TU Eindhoven: AI-examined learning, robots for precision agriculture, reinforcement learning under partial information, electron microscopy, aerial industrial inspection, and self-learning engines.">
+<link rel="icon" href="assets/photo.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="bar"></div>
+<header class="top">
+  <nav class="nav wrap">
+    <div class="brand"><b><a href="index.html" style="color:inherit;">Duarte Antunes</a></b><span>Eindhoven University of Technology</span></div>
+    <ul>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="index.html#publications">Publications</a></li>
+      <li><a href="index.html#teaching">Teaching</a></li>
+      <li><a href="index.html#students">Supervision</a></li>
+      <li><a href="index.html#videos">Videos</a></li>
+      <li><a href="index.html#grants">Grants &amp; Awards</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <p class="kicker">Current research</p>
+    <h1>Research</h1>
+    <p>Six lines of work, three of them the focus of active 2026 project proposals. Each combines control theory with machine learning, and each is anchored in a concrete physical system — a field, a microscope, a turbine blade, an engine, a lecture hall.</p>
+    <div class="jump"><a href="#precision-agriculture">Robots for Precision Agriculture</a> <a href="#rl-partial-information">Reinforcement Learning under Partial Information</a> <a href="#aerial-inspection">Aerial Robots for Industrial Inspection</a> <a href="#electron-microscopy">Control and Learning for Electron Microscopy</a> <a href="#self-learning-engines">Self-Learning Engines</a> <a href="#ai-exams">AI-Examined Learning</a> <a href="#past">Past work</a></div>
+  </div>
+</section>
+
+  <article class="rline" id="precision-agriculture">
+    <div class="wrap">
+      <div class="rnum">LINE 01</div>
+      <h2>Robots for Precision Agriculture</h2>
+      <p class="rtag">Legged and ground robots for weeding, seeding and selective harvesting</p>
+      <p>Arable farming is one of the few large-scale industries where the physical task is still largely uniform across a field that is anything but uniform. Robots that can treat each plant individually — weeding, seeding, selectively harvesting — promise large reductions in chemical input, but they demand perception, decision-making and control that hold up in mud, wind and changing light.</p>
+      <p>Our focus is the decision layer: given a partial, noisy and expensive-to-acquire picture of a field, what should the robot look at next, and what should it do? We formulate this as sequential decision-making under uncertainty — partially observable Markov decision processes, adaptive sampling, multi-agent allocation — and pursue approximations cheap enough to run on a robot yet carrying performance bounds. Current work extends this to legged platforms, whose mobility over soft and uneven ground opens field windows that wheeled machines cannot use.</p>
+      <dl class="rmeta">
+        <dt>People</dt><dd>R. Beumer (World Modelling and Decision-Making for Robots in Precision Agriculture); earlier A.T.J.R. Cobbenhagen (multi-agent allocation and classification) and W. Kuijpers (optimal greenhouse climate control).</dd>
+        <dt>Funding</dt><dd>Synergia (NWO Crossover, with Wageningen University and Avular); Drone-based multi-agent system for farming (TKI HTSM).</dd>
+        <dt>Partners</dt><dd>Avular · Wageningen University &amp; Research</dd>
+        <dt>Recognition</dt><dd>Supervisor of Tom Janssen, winner of the 2026 MSc Thesis Award of the Nederlandse Vereniging voor Techniek in de Landbouw (NVTL).</dd>
+        <dt>Selected outputs</dt><dd><a href="https://arxiv.org/abs/2609.20604" target="_blank" rel="noopener">Semantic SLAM in precision agriculture using Bayesian inference</a> (arXiv, 2026) · <a href="https://arxiv.org/abs/2609.20048" target="_blank" rel="noopener">Mechanical precision weeding with a quadruped robot</a> (arXiv, 2026) · <a href="https://doi.org/10.1016/j.arcontrol.2021.01.001" target="_blank" rel="noopener">Opportunities for control engineering in arable precision agriculture</a> (Annual Reviews in Control, 2021) · <a href="https://doi.org/10.1109/LRA.2025.3600147" target="_blank" rel="noopener">To harvest or not to harvest: mapping and decision-making for a selective table grape harvesting robot</a> (IEEE RA-L, 2025) · <a href="https://doi.org/10.1109/CDC51059.2022.9992329" target="_blank" rel="noopener">Adaptive sampling and actuation for POMDPs: application to precision agriculture</a> (CDC 2022) · <a href="https://doi.org/10.1016/j.biosystemseng.2020.12.006" target="_blank" rel="noopener">Lighting systems and strategies compared in an optimally controlled greenhouse</a> (Biosystems Engineering, 2021)</dd>
+      </dl>
+    </div>
+  </article>
+
+  <article class="rline" id="rl-partial-information">
+    <div class="wrap">
+      <div class="rnum">LINE 02</div>
+      <h2>Reinforcement Learning under Partial Information</h2>
+      <p class="rtag">Actor–critic methods when the agent cannot see the state</p>
+      <p>Most reinforcement learning theory assumes the agent observes the state. Most real systems do not provide one. When the agent sees only partial, noisy observations, the classical guarantees of policy iteration dissolve — and the standard remedy, carrying a belief state, is usually intractable.</p>
+      <p>We study what can be recovered without a belief state. Memoryless policy iteration asks when a policy mapping the current observation directly to an action can still be improved monotonically, and what the price of forgetting is. In parallel we develop the actor–critic <em>dramaturg</em>: an architecture that separates what an agent can act on from what it can only infer, giving the critic access at training time to privileged information the actor never sees at deployment.</p>
+      <dl class="rmeta">
+        <dt>People</dt><dd>R. van Zuijlen (<a href='theses/vanZuijlen-thesis.pdf' target='_blank' rel='noopener'>Policy Iteration with Limited Data and Partial Information</a>); M. van Zutphen (Entropy Regularization for Control and Estimation); J. van Hulst.</dd>
+        <dt>Invited talk</dt><dd>“Memoryless Policy Iteration”, Universität Stuttgart, 2026 (invited by F. Allgöwer).</dd>
+        <dt>Selected outputs</dt><dd><a href="https://arxiv.org/abs/2512.11082" target="_blank" rel="noopener">Memoryless Policy Iteration for Episodic POMDPs</a> (2025) · <a href="https://doi.org/10.1007/s10994-025-06912-z" target="_blank" rel="noopener">Least-squares temporal difference with expected eligibility traces</a> (Machine Learning, 2025) · <a href="https://doi.org/10.1109/CDC56724.2024.10886653" target="_blank" rel="noopener">Data-efficient quadratic Q-learning using LMIs</a> (CDC 2024)</dd>
+      </dl>
+    </div>
+  </article>
+
+  <article class="rline" id="aerial-inspection">
+    <div class="wrap">
+      <div class="rnum">LINE 03</div>
+      <h2>Aerial Robots for Industrial Inspection</h2>
+      <p class="rtag">Drone-borne X-ray and radiography for wind turbines and power grids</p>
+      <p>Inspecting a ninety-metre offshore turbine blade or a live high-voltage pylon means sending people to dangerous places, or shutting the asset down. A drone carrying a radiography payload can do neither — provided it holds position accurately enough, for long enough, with a heavy and awkwardly placed source.</p>
+      <p>The payload changes the problem. An X-ray source is heavy relative to the airframe and cannot sit at the centre of mass, so we study where to place it for best control performance, how to place and control the gimbal that aims it, and how much residual motion the resulting image can tolerate before blur destroys the inspection. On top of that sits trajectory tracking with guarantees — model predictive control for quadcopters with almost global tracking guarantees — and autonomous landing.</p>
+      <dl class="rmeta">
+        <dt>People</dt><dd>B. Meere (autonomous aerial radiography of offshore wind turbine blades); S. Doodeman (aerial X-ray inspection: gimbal placement, control and autonomous landing); T. Minten (Shocking Precision); earlier A. Andriën (optimisation-based estimation and control for quadcopters).</dd>
+        <dt>Funding</dt><dd>Shocking Precision (2025, with Spect X and Avular); WINDMILLS (2023, RVO HER+, with Avular); Drone Safety Cluster (OP-ZUID); STW Take-off, Novel UAS for Industrial Inspection.</dd>
+        <dt>Partners</dt><dd>Avular · Spect X</dd>
+        <dt>Selected outputs</dt><dd><a href="https://doi.org/10.1007/s10921-025-01279-6" target="_blank" rel="noopener">X-ray image generation for robotic radiography: motion blur in drone-based wind turbine inspections</a> (J. Nondestructive Evaluation, 2025) · <a href="https://doi.org/10.1109/TAC.2023.3349098" target="_blank" rel="noopener">Model predictive control for quadcopters with almost global trajectory tracking guarantees</a> (IEEE TAC, 2024) · <a href="https://arxiv.org/abs/2601.13958" target="_blank" rel="noopener">Where to place a heavy payload on a multirotor UAV for best control performance</a> (2026)</dd>
+      </dl>
+    </div>
+  </article>
+
+  <article class="rline" id="electron-microscopy">
+    <div class="wrap">
+      <div class="rnum">LINE 04</div>
+      <h2>Control and Learning for Electron Microscopy</h2>
+      <p class="rtag">Calibration, estimation and stage control at the ångström scale</p>
+      <p>A transmission electron microscope is a control problem disguised as an optical instrument: dozens of coupled electromagnetic lens settings, a drifting specimen stage, and an image that is simultaneously the measurement and the product. Tuning it is slow expert work. Therefore, we work on automate this process.</p>
+      <p>Three threads run through the line. <b>Calibration</b>: learning the map from lens settings to aberrations from images alone, combining deep learning with Bayesian optimisation, and bridging the gap between simulated and real microscopes. <b>Estimation</b>: tracking specimen drift and evolving aberrations as dynamic Gaussian processes, using tilt-based schemes to observe what a single image cannot. <b>Stage control</b>: hysteresis compensation, iterative learning and vision-based sensing to position a specimen precisely and repeatably.</p>
+      <dl class="rmeta">
+        <dt>People</dt><dd>J. van Hulst (<a href='theses/vanHulst-thesis.pdf' target='_blank' rel='noopener'>Learning-Based Calibration, Estimation and Stage Control for Electron Microscopy</a>); earlier E. van Horssen (data-intensive feedback control).</dd>
+        <dt>Funding</dt><dd>Learning in Motion (EAISI, with Thermo Fisher Scientific); ASIMOV (ITEA Eureka cluster AI call, with TNO, Thermo Fisher and EASI).</dd>
+        <dt>Partner</dt><dd>Thermo Fisher Scientific. A patent application with FEI Company came out of this line.</dd>
+        <dt>Selected outputs</dt><dd><a href="https://doi.org/10.1109/ACCESS.2025.3595430" target="_blank" rel="noopener">Calibration of electron microscopes through deep learning and Bayesian optimization</a> (IEEE Access, 2025) · <a href="https://doi.org/10.1016/j.mechatronics.2026.103529" target="_blank" rel="noopener">Tilt-based aberration estimation in transmission electron microscopy</a> (Mechatronics, 2026) · <a href="https://doi.org/10.1016/j.ifacsc.2020.100074" target="_blank" rel="noopener">Image-based feedback control for drift compensation in an electron microscope</a> (IFAC J. Systems and Control, 2020)</dd>
+      </dl>
+    </div>
+  </article>
+
+  <article class="rline" id="self-learning-engines">
+    <div class="wrap">
+      <div class="rnum">LINE 05</div>
+      <h2>Self-Learning Engines</h2>
+      <p class="rtag">Risk-aware automatic calibration of diesel engine control</p>
+      <p>Modern diesel engines have too many calibration parameters to tune by hand across every operating point and every emissions constraint. The obvious answer — search automatically on a test bench — runs into a hard limit: a bad trial can damage the engine or violate emissions limits, and every trial is expensive.</p>
+      <p>We treat calibration as constrained Bayesian optimisation with an explicit risk budget: the optimiser must respect safety and emissions constraints with high probability while it is still learning where those constraints lie. The broader aim is an engine that keeps recalibrating itself over its lifetime as fuels, hardware and regulations change.</p>
+      <dl class="rmeta">
+        <dt>People</dt><dd>M. Vermissen (Self-learning Diesel Engines); M. Vlaswinkel (<a href='theses/Vlaswinkel-thesis.pdf' target='_blank' rel='noopener'>Automated Risk-Aware Calibration of Internal Combustion Engines</a>, completed 2024).</dd>
+        <dt>Selected output</dt><dd><a href="https://arxiv.org/abs/2503.20493" target="_blank" rel="noopener">Automated and risk-aware engine control calibration using constrained Bayesian optimization</a> (2025, with F. Willems).</dd>
+      </dl>
+    </div>
+  </article>
+
+  <article class="rline" id="ai-exams">
+    <div class="wrap">
+      <div class="rnum">LINE 06</div>
+      <h2>AI-Examined Learning</h2>
+      <p class="rtag">Automated oral examination for project-based education</p>
+      <p>Project-based courses are where engineering students learn the most, and where it is hardest to know what each individual student actually did. Generative AI has made that problem acute: a convincing report is no longer evidence of understanding. This line develops AI examiners that conduct short, adaptive oral exams about a student's own project, probing the reasoning behind specific choices in their own submitted work.</p>
+      <p>The technical core is not the language model itself but the assessment design around it: how to generate questions that are grounded in a specific artefact (code, report, design), how to score answers against defensible and reproducible criteria, how to calibrate difficulty to the student and the course, and above all how to bound the false-accusation rate. We approach this as a verification problem with the same rigour we apply to control systems — what can be guaranteed, under which assumptions, and with what error probabilities.</p>
+      <dl class="rmeta">
+        <dt>Background</dt><dd>Two TU/e Educational Fund grants (Chameleon, adaptive course threads; Using MATLAB Live Scripts in Education) and work with MathWorks on Cody Coursework, an automatic assessment tool for programming assignments, presented in an invited special session at CDC 2016.</dd>
+        <dt>Teaching scale</dt><dd>Optimal Control and Reinforcement Learning (~110 MSc students/year); previously Signals and Systems (~250 BSc students/year).</dd>
+      </dl>
+    </div>
+  </article>
+
+<section class="past-band" id="past">
+  <div class="wrap">
+    <p class="kicker">Earlier research lines</p>
+    <h2>What I have worked on in the past</h2>
+    <p style="max-width:70ch;">Themes that shaped the current work and remain active in the group's collaborations, though they are no longer the focus of new proposals.</p>
+    <div class="past-grid">
+      <div class="past-item">
+        <h3>Event-Triggered Control</h3>
+        <p>When should a controller sample and transmit? Over a decade we moved this question from heuristic thresholds to policies with guarantees. Rollout event-triggered control gave the first proof that event-triggered control can outperform periodic control for <em>any</em> linear system; consistency results then showed how to guarantee never doing worse than periodic control at the same average transmission rate. Later work extended this to output feedback, decentralised and shared contention-based networks, stochastic thresholds, and consensus. Recently we have <a href="https://ieeexplore.ieee.org/document/11643595/" target="_blank" rel="noopener">shown</a> that if performance is measured instead by the ℓ₂ gain, event-triggered control cannot improve on the performance of periodic control while transmitting at a lower rate.</p>
+        <p class="past-people">PhD students: T. Gommans, B. Asadi Khashooei, M. Balaghiinaloo.</p>
+        <ul class="past-key"><li><a href="https://ieeexplore.ieee.org/document/11643595/" target="_blank" rel="noopener">Can event-triggered control improve the ℓ₂ gain of H∞ optimal periodic control and transmit at a lower average rate?</a> · <span class="pvenue">IEEE TAC, 2026</span></li><li><a href="https://doi.org/10.1109/TAC.2014.2351932" target="_blank" rel="noopener">Rollout event-triggered control: beyond periodic control performance</a> · <span class="pvenue">IEEE TAC, 2014</span></li><li><a href="https://doi.org/10.1109/LCSYS.2018.2840970" target="_blank" rel="noopener">A consistent threshold-based policy for event-triggered control</a> · <span class="pvenue">IEEE L-CSS, 2018 — 2019 CSL Outstanding Paper Award</span></li></ul>
+      </div>
+      <div class="past-item">
+        <h3>Networked Control Systems</h3>
+        <p>The subject of my PhD and early faculty years: what happens to a feedback loop when the link between sensor, controller and actuator is unreliable, delayed or shared. Using impulsive and stochastic hybrid systems driven by renewal processes, we obtained stability and performance conditions for asynchronous links, and frequency-domain tools — root loci, Nyquist criteria — for loops with stochastic delays and data losses.</p>
+        <p class="past-people">In collaboration with J. P. Hespanha (UC Santa Barbara) and C. Silvestre (IST Lisbon).</p>
+        <ul class="past-key"><li><a href="https://doi.org/10.1016/j.automatica.2022.110626" target="_blank" rel="noopener">Frequency-domain analysis of aperiodic control loops with identically distributed delays</a> · <span class="pvenue">Automatica, vol. 151, 2023</span></li><li><a href="https://ieeexplore.ieee.org/document/9318025/" target="_blank" rel="noopener">Frequency-domain analysis of networked control systems modeled by Markov jump linear systems</a> · <span class="pvenue">IEEE Trans. Control of Network Systems, 8(2):906–916, 2021</span></li><li><a href="https://doi.org/10.1016/j.automatica.2012.11.033" target="_blank" rel="noopener">Stability of networked control systems with asynchronous renewal links: an impulsive systems approach</a> · <span class="pvenue">Automatica, 2013</span></li><li><a href="https://doi.org/10.1109/TAC.2011.2166300" target="_blank" rel="noopener">Volterra integral approach to impulsive renewal systems: application to networked control</a> · <span class="pvenue">IEEE TAC, 2011</span></li></ul>
+      </div>
+      <div class="past-item">
+        <h3>Switched Linear Systems</h3>
+        <p>Systems that must choose among modes: which sensor to read, which processing method to run, which subsystem to actuate. We developed relaxed dynamic programming and “informed policy” approaches — approximate policies that leverage bounds on the optimal cost to quantify their own suboptimality — applied to switched LQG control with multiple sensing methods and to scheduling problems.</p>
+        <p class="past-people">PhD student: E. van Horssen.</p>
+        <ul class="past-key"><li><a href="https://doi.org/10.1109/TAC.2016.2616388" target="_blank" rel="noopener">Linear quadratic regulation of switched systems using informed policies</a> · <span class="pvenue">IEEE TAC, 2016</span></li><li><a href="https://doi.org/10.1016/j.automatica.2019.01.036" target="_blank" rel="noopener">Switched LQG control for linear systems with multiple sensing methods</a> · <span class="pvenue">Automatica, 2019</span></li></ul>
+      </div>
+      <div class="past-item">
+        <h3>Control for Lithography and High-Precision Motion</h3>
+        <p>With ASML and Prodrive: what deadline misses in a real-time implementation actually cost a high-end motion system, and how multirate feedforward can break the performance-versus-cost trade-off in dual-stage wafer systems. Carried out with the wide TU/e motion control community.</p>
+        <p class="past-people">Partners: ASML · Prodrive · Technolution.</p>
+        <ul class="past-key"><li><a href="https://doi.org/10.1109/TCST.2018.2882341" target="_blank" rel="noopener">Beyond performance/cost trade-offs in motion control: a multirate feedforward design with application to a dual-stage wafer system</a> · <span class="pvenue">IEEE TCST, 2018</span></li><li><a href="https://doi.org/10.1109/TIE.2015.2504339" target="_blank" rel="noopener">The impact of deadline misses on the control performance of high-end motion control systems</a> · <span class="pvenue">IEEE TIE, 2015</span></li></ul>
+      </div>
+    </div>
+    <p class="note">Earlier work also covered systems biology — stochastic gene expression and cell-division noise, with A. Singh (University of Delaware) — and optimal climate control for greenhouses.</p>
+  </div>
+</section>
+
+<section id="contact-strip">
+  <div class="wrap">
+    <p class="kicker">Get in touch</p>
+    <h2>Interested in collaborating?</h2>
+    <p>I am open to joint proposals, industrial partnerships and PhD collaborations across all six lines.</p>
+    <div class="links">
+      <a class="btn primary" href="mailto:d.antunes@tue.nl">d.antunes@tue.nl</a>
+      <a class="btn" href="index.html">Back to homepage</a>
+      <a class="btn" href="assets/Duarte_Antunes_CV.pdf">Download CV</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    &copy; <span id="year"></span> Duarte Antunes · Control Systems Technology Group · Eindhoven University of Technology
+  </div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
